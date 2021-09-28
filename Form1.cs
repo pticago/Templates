@@ -44,6 +44,8 @@ namespace Templates
 
                 try
                 {
+                    refreshCollection();
+
                     System.IO.File.Copy(txtTemplatePath.Text, newFileName);
 
                     WordprocessingDocument myDoc = WordprocessingDocument.Open(newFileName, true);
