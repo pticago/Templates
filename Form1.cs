@@ -61,7 +61,7 @@ namespace Templates
                         {
                             replaceTextOfField(f, f);
                         }
-                        else if (f is Run && f.InnerText.Contains("FILLIN"))
+                        else if (f is Run && f.InnerText.Trim().StartsWith("FILLIN ") && f.InnerText.Trim().EndsWith("MERGEFORMAT"))
                         {
                             //ako je Run sa InnerText FILLIN, jedno od sljedećih Run polja je polje koje opet ima traženo Text child polje
                             for (int x = i + 1; x < fields.Count; x++)
@@ -69,6 +69,30 @@ namespace Templates
                                 if (fields[x] is Run && !string.IsNullOrEmpty(fields[x].InnerText))
                                 {
                                     replaceTextOfField(f, fields[x]);
+                                    break;
+                                }
+                            }
+                        }
+                        else if(f is Run && f.InnerText.Trim().StartsWith("FILLIN"))
+                        {
+                            //teži put, našo rascijepani FILLIN, nafilaj key do MERGEFORMAT
+                            string key = f.InnerText;
+                            for(int y = i +1; y < fields.Count; y++)
+                            {
+                                if(fields[y] is Run && fields[y].InnerText.Trim().EndsWith("MERGEFORMAT"))
+                                {
+                                    key += fields[y].InnerText;
+
+                                    //opet isto, jedno od sljedećih Run polja je polje koje opet ima traženo Text child polje
+                                    for (int x = y + 1; x < fields.Count; x++)
+                                    {
+                                        if (fields[x] is Run && !string.IsNullOrEmpty(fields[x].InnerText))
+                                        {
+                                            replaceTextOfField(key, fields[x]);
+                                            break;
+                                        }
+                                    }
+
                                     break;
                                 }
                             }
@@ -99,25 +123,21 @@ namespace Templates
         private void refreshCollection()
         {
             collection.Clear();
-            collection.Add("Ime", txtIme.Text);
-            collection.Add("Prezime", txtPrezime.Text);
-            collection.Add("Adresa", txtAdresa.Text);
-            collection.Add("Telefon", txtTelefon.Text);
-            collection.Add("Email", txtEmail.Text);
-            collection.Add("UasProizvodjac", txtUasProizvodjac.Text);
-            collection.Add("UasModel", txtUasModel.Text);
-            collection.Add("RezID", txtRezID.Text);
-            collection.Add("NazivAero", txtNazivAero.Text);
-            collection.Add("NazivPriredbe", txtNazivPriredbe.Text);
-            collection.Add("Lokacija", txtLokacija.Text);
-            collection.Add("GornjaGranica", txtGornjaGranica.Text);
-            collection.Add("DonjaGranica", txtDonjaGranica.Text);
-            collection.Add("Polumjer", txtPolumjer.Text);
-            collection.Add("DatumPocetka", txtDatumPocetka.Text);
-            collection.Add("VrijemeOd", txtVrijemeOd.Text);
-            collection.Add("DatumZavrsetka", txtDatumZavrsetka.Text);
-            collection.Add("VrijemeDo", txtVrijemeDo.Text);
-            collection.Add("DatumZahtjeva", txtDatumZahtjeva.Text);
+            collection.Add("Ime", !string.IsNullOrEmpty(txtIme.Text) ? txtIme.Text : "-");
+            collection.Add("Prezime", !string.IsNullOrEmpty(txtPrezime.Text) ? txtPrezime.Text : "-");
+            collection.Add("Adresa", !string.IsNullOrEmpty(txtAdresa.Text) ? txtAdresa.Text : "-");
+            collection.Add("Telefon", !string.IsNullOrEmpty(txtTelefon.Text) ? txtTelefon.Text : "-");
+            collection.Add("Email", !string.IsNullOrEmpty(txtEmail.Text) ? txtEmail.Text : "-");
+            collection.Add("RezID", !string.IsNullOrEmpty(txtRezID.Text) ? txtRezID.Text : "-");
+            collection.Add("VrstaAktivnosti", !string.IsNullOrEmpty(txtVrstaAktivnosti.Text) ? txtVrstaAktivnosti.Text : "-");
+            collection.Add("NazivPriredbe", !string.IsNullOrEmpty(txtNazivPriredbe.Text) ? txtNazivPriredbe.Text : "-");
+            collection.Add("Lokacija", !string.IsNullOrEmpty(txtLokacija.Text) ? txtLokacija.Text : "-");
+            collection.Add("GornjaGranica", !string.IsNullOrEmpty(txtGornjaGranica.Text) ? txtGornjaGranica.Text : "-");
+            collection.Add("DonjaGranica", !string.IsNullOrEmpty(txtDonjaGranica.Text) ? txtDonjaGranica.Text : "-");
+            collection.Add("Polumjer", !string.IsNullOrEmpty(txtPolumjer.Text) ? txtPolumjer.Text : "-");
+            collection.Add("DnevniPeriodAktivnosti", !string.IsNullOrEmpty(txtDnevniPeriodAktivnosti.Text) ? txtDnevniPeriodAktivnosti.Text : "-");
+            collection.Add("ValjanostOdobrenja", !string.IsNullOrEmpty(txtValjanostOdobrenja.Text) ? txtValjanostOdobrenja.Text : "-");
+            collection.Add("DatumZahtjeva", !string.IsNullOrEmpty(txtDatumZahtjeva.Text) ? txtDatumZahtjeva.Text : "-");
         }
 
         private void replaceTextOfFirstChildTextField(OpenXmlElement field, string text)
@@ -144,6 +164,18 @@ namespace Templates
             }
         }
 
-        
+        private void replaceTextOfField(string key, OpenXmlElement textField)
+        {
+            foreach (var item in collection)
+            {
+                if (key.Contains(item.Key))
+                {
+                    replaceTextOfFirstChildTextField(textField, item.Value);
+                    break;
+                }
+            }
+        }
+
+
     }
 }

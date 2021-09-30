@@ -52,32 +52,24 @@ namespace Templates
             this.label10 = new System.Windows.Forms.Label();
             this.txtDonjaGranica = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtNazivAero = new System.Windows.Forms.TextBox();
+            this.txtVrstaAktivnosti = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtLokacija = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtPolumjer = new System.Windows.Forms.TextBox();
-            this.txtDatumPocetka = new System.Windows.Forms.TextBox();
-            this.txtVrijemeOd = new System.Windows.Forms.TextBox();
-            this.txtDatumZavrsetka = new System.Windows.Forms.TextBox();
-            this.txtVrijemeDo = new System.Windows.Forms.TextBox();
+            this.txtDnevniPeriodAktivnosti = new System.Windows.Forms.TextBox();
+            this.txtValjanostOdobrenja = new System.Windows.Forms.TextBox();
             this.txtDatumZahtjeva = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtUasModel = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtUasProizvodjac = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtIme
             // 
             this.txtIme.Location = new System.Drawing.Point(96, 82);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(100, 23);
+            this.txtIme.Size = new System.Drawing.Size(162, 23);
             this.txtIme.TabIndex = 1;
             this.txtIme.Text = "Mirko";
             // 
@@ -103,7 +95,7 @@ namespace Templates
             // 
             this.txtPrezime.Location = new System.Drawing.Point(96, 128);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(100, 23);
+            this.txtPrezime.Size = new System.Drawing.Size(162, 23);
             this.txtPrezime.TabIndex = 2;
             this.txtPrezime.Text = "Fodor";
             // 
@@ -137,9 +129,9 @@ namespace Templates
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(96, 616);
+            this.btnGenerate.Location = new System.Drawing.Point(45, 512);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(389, 46);
+            this.btnGenerate.Size = new System.Drawing.Size(521, 61);
             this.btnGenerate.TabIndex = 20;
             this.btnGenerate.Text = "Kreiraj dokument na osnovu templatea";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -158,7 +150,7 @@ namespace Templates
             // 
             this.txtAdresa.Location = new System.Drawing.Point(96, 173);
             this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(100, 23);
+            this.txtAdresa.Size = new System.Drawing.Size(162, 23);
             this.txtAdresa.TabIndex = 3;
             this.txtAdresa.Text = "Ulica 123";
             // 
@@ -166,7 +158,7 @@ namespace Templates
             // 
             this.txtTelefon.Location = new System.Drawing.Point(96, 217);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(100, 23);
+            this.txtTelefon.Size = new System.Drawing.Size(162, 23);
             this.txtTelefon.TabIndex = 4;
             this.txtTelefon.Text = "+385 (044) 861 118";
             // 
@@ -192,7 +184,7 @@ namespace Templates
             // 
             this.txtEmail.Location = new System.Drawing.Point(96, 260);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 23);
+            this.txtEmail.Size = new System.Drawing.Size(162, 23);
             this.txtEmail.TabIndex = 5;
             this.txtEmail.Text = "mirko@email.com";
             // 
@@ -209,7 +201,7 @@ namespace Templates
             // 
             this.txtRezID.Location = new System.Drawing.Point(385, 82);
             this.txtRezID.Name = "txtRezID";
-            this.txtRezID.Size = new System.Drawing.Size(100, 23);
+            this.txtRezID.Size = new System.Drawing.Size(181, 23);
             this.txtRezID.TabIndex = 8;
             this.txtRezID.Text = "112233";
             // 
@@ -226,7 +218,7 @@ namespace Templates
             // 
             this.txtNazivPriredbe.Location = new System.Drawing.Point(385, 173);
             this.txtNazivPriredbe.Name = "txtNazivPriredbe";
-            this.txtNazivPriredbe.Size = new System.Drawing.Size(100, 23);
+            this.txtNazivPriredbe.Size = new System.Drawing.Size(181, 23);
             this.txtNazivPriredbe.TabIndex = 10;
             this.txtNazivPriredbe.Text = "Voloderske jeseni";
             // 
@@ -243,7 +235,7 @@ namespace Templates
             // 
             this.txtGornjaGranica.Location = new System.Drawing.Point(385, 260);
             this.txtGornjaGranica.Name = "txtGornjaGranica";
-            this.txtGornjaGranica.Size = new System.Drawing.Size(100, 23);
+            this.txtGornjaGranica.Size = new System.Drawing.Size(181, 23);
             this.txtGornjaGranica.TabIndex = 12;
             this.txtGornjaGranica.Text = "gore";
             // 
@@ -260,26 +252,26 @@ namespace Templates
             // 
             this.txtDonjaGranica.Location = new System.Drawing.Point(385, 300);
             this.txtDonjaGranica.Name = "txtDonjaGranica";
-            this.txtDonjaGranica.Size = new System.Drawing.Size(100, 23);
+            this.txtDonjaGranica.Size = new System.Drawing.Size(181, 23);
             this.txtDonjaGranica.TabIndex = 13;
             this.txtDonjaGranica.Text = "dolje";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(317, 131);
+            this.label11.Location = new System.Drawing.Point(293, 131);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 15);
+            this.label11.Size = new System.Drawing.Size(87, 15);
             this.label11.TabIndex = 22;
-            this.label11.Text = "Naziv aero";
+            this.label11.Text = "Vrsta aktivnosti";
             // 
-            // txtNazivAero
+            // txtVrstaAktivnosti
             // 
-            this.txtNazivAero.Location = new System.Drawing.Point(385, 128);
-            this.txtNazivAero.Name = "txtNazivAero";
-            this.txtNazivAero.Size = new System.Drawing.Size(100, 23);
-            this.txtNazivAero.TabIndex = 9;
-            this.txtNazivAero.Text = "Letači";
+            this.txtVrstaAktivnosti.Location = new System.Drawing.Point(385, 128);
+            this.txtVrstaAktivnosti.Name = "txtVrstaAktivnosti";
+            this.txtVrstaAktivnosti.Size = new System.Drawing.Size(181, 23);
+            this.txtVrstaAktivnosti.TabIndex = 9;
+            this.txtVrstaAktivnosti.Text = "Bacanje aviončića";
             // 
             // label12
             // 
@@ -294,7 +286,7 @@ namespace Templates
             // 
             this.txtLokacija.Location = new System.Drawing.Point(385, 217);
             this.txtLokacija.Name = "txtLokacija";
-            this.txtLokacija.Size = new System.Drawing.Size(100, 23);
+            this.txtLokacija.Size = new System.Drawing.Size(181, 23);
             this.txtLokacija.TabIndex = 11;
             this.txtLokacija.Text = "Voloder";
             // 
@@ -311,153 +303,77 @@ namespace Templates
             // 
             this.txtPolumjer.Location = new System.Drawing.Point(385, 341);
             this.txtPolumjer.Name = "txtPolumjer";
-            this.txtPolumjer.Size = new System.Drawing.Size(100, 23);
+            this.txtPolumjer.Size = new System.Drawing.Size(181, 23);
             this.txtPolumjer.TabIndex = 14;
-            this.txtPolumjer.Text = "500 m";
+            this.txtPolumjer.Text = "123 m";
             // 
-            // txtDatumPocetka
+            // txtDnevniPeriodAktivnosti
             // 
-            this.txtDatumPocetka.Location = new System.Drawing.Point(385, 382);
-            this.txtDatumPocetka.Name = "txtDatumPocetka";
-            this.txtDatumPocetka.Size = new System.Drawing.Size(100, 23);
-            this.txtDatumPocetka.TabIndex = 15;
-            this.txtDatumPocetka.Text = "danas";
+            this.txtDnevniPeriodAktivnosti.Location = new System.Drawing.Point(385, 382);
+            this.txtDnevniPeriodAktivnosti.Name = "txtDnevniPeriodAktivnosti";
+            this.txtDnevniPeriodAktivnosti.Size = new System.Drawing.Size(181, 23);
+            this.txtDnevniPeriodAktivnosti.TabIndex = 15;
+            this.txtDnevniPeriodAktivnosti.Text = "12:00 - 2:00 UTC";
             // 
-            // txtVrijemeOd
+            // txtValjanostOdobrenja
             // 
-            this.txtVrijemeOd.Location = new System.Drawing.Point(385, 423);
-            this.txtVrijemeOd.Name = "txtVrijemeOd";
-            this.txtVrijemeOd.Size = new System.Drawing.Size(100, 23);
-            this.txtVrijemeOd.TabIndex = 16;
-            this.txtVrijemeOd.Text = "ujutro";
-            // 
-            // txtDatumZavrsetka
-            // 
-            this.txtDatumZavrsetka.Location = new System.Drawing.Point(385, 464);
-            this.txtDatumZavrsetka.Name = "txtDatumZavrsetka";
-            this.txtDatumZavrsetka.Size = new System.Drawing.Size(100, 23);
-            this.txtDatumZavrsetka.TabIndex = 17;
-            this.txtDatumZavrsetka.Text = "sutra";
-            // 
-            // txtVrijemeDo
-            // 
-            this.txtVrijemeDo.Location = new System.Drawing.Point(385, 507);
-            this.txtVrijemeDo.Name = "txtVrijemeDo";
-            this.txtVrijemeDo.Size = new System.Drawing.Size(100, 23);
-            this.txtVrijemeDo.TabIndex = 18;
-            this.txtVrijemeDo.Text = "navečer";
+            this.txtValjanostOdobrenja.Location = new System.Drawing.Point(385, 423);
+            this.txtValjanostOdobrenja.Name = "txtValjanostOdobrenja";
+            this.txtValjanostOdobrenja.Size = new System.Drawing.Size(181, 23);
+            this.txtValjanostOdobrenja.TabIndex = 16;
+            this.txtValjanostOdobrenja.Text = "1.1.2021. - 1.1.2021.";
             // 
             // txtDatumZahtjeva
             // 
-            this.txtDatumZahtjeva.Location = new System.Drawing.Point(385, 549);
+            this.txtDatumZahtjeva.Location = new System.Drawing.Point(385, 466);
             this.txtDatumZahtjeva.Name = "txtDatumZahtjeva";
-            this.txtDatumZahtjeva.Size = new System.Drawing.Size(100, 23);
+            this.txtDatumZahtjeva.Size = new System.Drawing.Size(181, 23);
             this.txtDatumZahtjeva.TabIndex = 19;
-            this.txtDatumZahtjeva.Text = "17.9.2021.";
+            this.txtDatumZahtjeva.Text = "1.1.2021.";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(291, 385);
+            this.label14.Location = new System.Drawing.Point(245, 385);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 15);
+            this.label14.Size = new System.Drawing.Size(135, 15);
             this.label14.TabIndex = 33;
-            this.label14.Text = "Datum početka";
+            this.label14.Text = "Dnevni period aktivnosti";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(315, 426);
+            this.label15.Location = new System.Drawing.Point(268, 426);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 15);
+            this.label15.Size = new System.Drawing.Size(111, 15);
             this.label15.TabIndex = 34;
-            this.label15.Text = "Vrijeme od";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(285, 467);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 15);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Datum završetka";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(315, 510);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 15);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Vrijeme do";
+            this.label15.Text = "Valjanost odobrenja";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(290, 552);
+            this.label18.Location = new System.Drawing.Point(290, 469);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(89, 15);
             this.label18.TabIndex = 37;
             this.label18.Text = "Datum zahtjeva";
             // 
-            // txtUasModel
-            // 
-            this.txtUasModel.Location = new System.Drawing.Point(141, 382);
-            this.txtUasModel.Name = "txtUasModel";
-            this.txtUasModel.Size = new System.Drawing.Size(100, 23);
-            this.txtUasModel.TabIndex = 7;
-            this.txtUasModel.Text = "Mavic Pro";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(49, 387);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 15);
-            this.label19.TabIndex = 40;
-            this.label19.Text = "UAS model";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(45, 344);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(90, 15);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "UAS proizvođač";
-            // 
-            // txtUasProizvodjac
-            // 
-            this.txtUasProizvodjac.Location = new System.Drawing.Point(141, 341);
-            this.txtUasProizvodjac.Name = "txtUasProizvodjac";
-            this.txtUasProizvodjac.Size = new System.Drawing.Size(100, 23);
-            this.txtUasProizvodjac.TabIndex = 6;
-            this.txtUasProizvodjac.Text = "DJY";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 674);
-            this.Controls.Add(this.txtUasModel);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.txtUasProizvodjac);
+            this.ClientSize = new System.Drawing.Size(599, 596);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtDatumZahtjeva);
-            this.Controls.Add(this.txtVrijemeDo);
-            this.Controls.Add(this.txtDatumZavrsetka);
-            this.Controls.Add(this.txtVrijemeOd);
-            this.Controls.Add(this.txtDatumPocetka);
+            this.Controls.Add(this.txtValjanostOdobrenja);
+            this.Controls.Add(this.txtDnevniPeriodAktivnosti);
             this.Controls.Add(this.txtPolumjer);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtLokacija);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtNazivAero);
+            this.Controls.Add(this.txtVrstaAktivnosti);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDonjaGranica);
             this.Controls.Add(this.label10);
@@ -513,25 +429,17 @@ namespace Templates
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDonjaGranica;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtNazivAero;
+        private System.Windows.Forms.TextBox txtVrstaAktivnosti;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtLokacija;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtPolumjer;
-        private System.Windows.Forms.TextBox txtDatumPocetka;
-        private System.Windows.Forms.TextBox txtVrijemeOd;
-        private System.Windows.Forms.TextBox txtDatumZavrsetka;
-        private System.Windows.Forms.TextBox txtVrijemeDo;
+        private System.Windows.Forms.TextBox txtDnevniPeriodAktivnosti;
+        private System.Windows.Forms.TextBox txtValjanostOdobrenja;
         private System.Windows.Forms.TextBox txtDatumZahtjeva;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtUasModel;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtUasProizvodjac;
     }
 }
 
